@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthropic", "Anthropic\Anthropic.csproj", "{D31EE00D-CD98-44D7-A6C7-17E2B321BF99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{5ACC30B7-901D-4EF9-96C5-C895749FA659}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{7F2D91D5-8D0E-4CD5-A318-84B6F6735B36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{5AC4E9CB-6E54-4A95-A4FF-33DB4371E3A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{95662577-AEDA-41A8-B9B7-B3DC544D0E1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D31EE00D-CD98-44D7-A6C7-17E2B321BF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D31EE00D-CD98-44D7-A6C7-17E2B321BF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D31EE00D-CD98-44D7-A6C7-17E2B321BF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D31EE00D-CD98-44D7-A6C7-17E2B321BF99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D31EE00D-CD98-44D7-A6C7-17E2B321BF99} = {5ACC30B7-901D-4EF9-96C5-C895749FA659}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D93C89B-2E5E-4F33-9BC8-F31919494C2C}
+	EndGlobalSection
+EndGlobal
