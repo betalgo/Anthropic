@@ -2,13 +2,21 @@
 
 public class AnthropicEndpointProvider : IAnthropicEndpointProvider
 {
+
+    private readonly string _apiVersion;
+
+    public AnthropicEndpointProvider(string apiVersion)
+    {
+        _apiVersion = apiVersion;
+    }
+
     public string CreateMessage()
     {
         return EndpointWithApiVersion("messages");
     }
 
-    private static string EndpointWithApiVersion(string endpoint)
+    private string EndpointWithApiVersion(string endpoint)
     {
-        return $"v1/{endpoint}";
+        return $"{_apiVersion}/{endpoint}";
     }
 }

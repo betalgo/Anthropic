@@ -1,15 +1,50 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>net8.0;net7.0;net6.0;netstandard2.0</TargetFrameworks>
+	  <TargetFrameworks>net8.0;net6.0;netstandard2.0</TargetFrameworks>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
 	  <LangVersion>Latest</LangVersion>
+	  <Copyright>Betalgo Up Ltd.</Copyright>
+	  <PackageProjectUrl>https://www.anthropic.com/</PackageProjectUrl>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Title>Anthropic SDK by Betalgo</Title>
+	  <Version>8.0.0</Version>
+	  <Authors>Tolga Kayhan, Betalgo</Authors>
+	  <Company>Betalgo Up Ltd.</Company>
+	  <Product>Anthropic Claude dotnet SDK</Product>
+	  <Description>Dotnet SDK for Anthropic Claude</Description>
+	  <RepositoryUrl>https://github.com/betalgo/anthropic/</RepositoryUrl>
+	  <PackageTags>Anthropic,Claude,ai,betalgo,NLP</PackageTags>
+	  <PackageId>Betalgo.Anthropic</PackageId>
+	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <RepositoryUrl>https://github.com/betalgo/anthropic.git</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <EmbedUntrackedSources>true</EmbedUntrackedSources>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Managers\" />
-    <Folder Include="ObjectModels\" />
   </ItemGroup>
+	<ItemGroup>
+		<None Include="..\Readme.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
+	</ItemGroup>
 
 </Project>
