@@ -9,14 +9,14 @@
 	  <PackageProjectUrl>https://www.anthropic.com/</PackageProjectUrl>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <Title>Anthropic SDK by Betalgo</Title>
-	  <Version>8.0.0</Version>
+	  <Version>0.0.1</Version>
 	  <Authors>Tolga Kayhan, Betalgo</Authors>
 	  <Company>Betalgo Up Ltd.</Company>
 	  <Product>Anthropic Claude dotnet SDK</Product>
 	  <Description>Dotnet SDK for Anthropic Claude</Description>
 	  <RepositoryUrl>https://github.com/betalgo/anthropic/</RepositoryUrl>
 	  <PackageTags>Anthropic,Claude,ai,betalgo,NLP</PackageTags>
-	  <PackageId>Betalgo.Anthropic</PackageId>
+	  <PackageId>Betalgo.Ranul.Anthropic</PackageId>
 	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	  <RepositoryUrl>https://github.com/betalgo/anthropic.git</RepositoryUrl>
