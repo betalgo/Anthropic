@@ -1,4 +1,5 @@
 ﻿using Anthropic.Extensions;
+using Anthropic.ObjectModels.RequestModels;
 using Anthropic.Playground.TestHelpers;
 using Anthropic.Services;
 using LaserCatEyes.HttpClientListener;
@@ -28,10 +29,8 @@ serviceCollection.AddAnthropicService();
 var serviceProvider = serviceCollection.BuildServiceProvider();
 var sdk = serviceProvider.GetRequiredService<IAnthropicService>();
 
-
-//await ChatTestHelper.RunSimpleChatTest(sdk);
-await ChatTestHelper.RunSimpleCompletionStreamTest(sdk);
-
-
+await ChatTestHelper.RunChatCompletionTest(sdk);
+await ChatTestHelper.RunChatCompletionStreamTest(sdk);
+await ChatToolUseTestHelper.RunChatCompletionWithToolUseTest(sdk);
 Console.WriteLine("Press any key to exit...");
 Console.ReadLine();

@@ -1,4 +1,5 @@
-﻿using Anthropic.Services;
+﻿using Anthropic.ObjectModels;
+using Anthropic.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Anthropic.Extensions;

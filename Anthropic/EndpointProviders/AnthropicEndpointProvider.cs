@@ -2,7 +2,6 @@
 
 public class AnthropicEndpointProvider : IAnthropicEndpointProvider
 {
-
     private readonly string _apiVersion;
 
     public AnthropicEndpointProvider(string apiVersion)

@@ -1,11 +1,10 @@
-﻿using System;
-using Anthropic.ObjectModels;
+﻿using Anthropic.ObjectModels;
 
 namespace Anthropic.Extensions;
 
-public static class ModelExtension
+internal static class ModelExtension
 {
-    public static void ProcessModelId(this IObjectModels.IModel modelFromObject, string? defaultModelId, bool allowNull = false)
+    internal static void ProcessModelId(this IObjectInterfaces.IModel modelFromObject, string? defaultModelId, bool allowNull = false)
     {
         if (allowNull)
         {

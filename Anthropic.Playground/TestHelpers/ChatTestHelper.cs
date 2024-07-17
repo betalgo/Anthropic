@@ -1,92 +1,108 @@
-﻿using Anthropic.ObjectModels;
+﻿using Anthropic.ObjectModels.ResponseModels;
+using Anthropic.ObjectModels.SharedModels;
 using Anthropic.Services;
 
 namespace Anthropic.Playground.TestHelpers;
 
+/// <summary>
+///     Helper class for testing chat functionalities of the Anthropic SDK.
+/// </summary>
 internal static class ChatTestHelper
 {
-    public static async Task RunSimpleChatTest(IAnthropicService sdk)
+    /// <summary>
+    ///     Runs a simple chat completion test using the Anthropic SDK.
+    /// </summary>
+    /// <param name="anthropicService">The Anthropic service instance.</param>
+    public static async Task RunChatCompletionTest(IAnthropicService anthropicService)
     {
-        Console.WriteLine("Messsaging Testing is starting:");
-
+        Console.WriteLine("Starting Chat Completion Test:");
         try
         {
-            Console.WriteLine("Chat Completion Test:", ConsoleColor.DarkCyan);
-            var completionResult = await sdk.Messages.Create(new()
+            Console.WriteLine("Sending chat completion request...");
+            var chatCompletionResult = await anthropicService.Messages.Create(new()
             {
-                Messages = new List<Message>
-                {
+                Messages =
+                [
                     Message.FromUser("Hello there."),
                     Message.FromAssistant("Hi, I'm Claude. How can I help you?"),
                     Message.FromUser("Can you explain LLMs in plain English?")
-                },
-                MaxTokens = 50,
+                ],
+                MaxTokens = 200,
                 Model = "claude-3-5-sonnet-20240620"
             });
 
-            if (completionResult.Successful)
+            if (chatCompletionResult.Successful)
             {
-                Console.WriteLine(completionResult.Content.First().Text);
+                Console.WriteLine("Chat Completion Response:");
+                Console.WriteLine(chatCompletionResult.ToString());
             }
             else
             {
-                if (completionResult.Error == null)
+                if (chatCompletionResult.Error == null)
                 {
-                    throw new("Unknown Error");
+                    throw new("Unknown Error Occurred");
                 }
 
-                Console.WriteLine($"{completionResult.HttpStatusCode}: {completionResult.Error.Message}");
+                Console.WriteLine($"Error: {chatCompletionResult.HttpStatusCode}: {chatCompletionResult.Error.Message}");
             }
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
-            Console.WriteLine(e);
+            Console.WriteLine($"Exception occurred: {ex}");
             throw;
         }
+        Console.WriteLine("----  0  ----");
+
     }
 
-    public static async Task RunSimpleCompletionStreamTest(IAnthropicService sdk)
+    /// <summary>
+    ///     Runs a simple chat completion stream test using the Anthropic SDK.
+    /// </summary>
+    /// <param name="anthropicService">The Anthropic service instance.</param>
+    public static async Task RunChatCompletionStreamTest(IAnthropicService anthropicService)
     {
-        Console.WriteLine("Chat Completion Stream Testing is starting:", ConsoleColor.Cyan);
+        Console.WriteLine("Starting Chat Completion Stream Test:");
         try
         {
-            Console.WriteLine("Chat Completion Stream Test:", ConsoleColor.DarkCyan);
-            var completionResult = sdk.Messages.CreateAsStream(new()
+            Console.WriteLine("Initiating chat completion stream...");
+            var chatCompletionStream = anthropicService.Messages.CreateAsStream(new()
             {
-                Messages = new List<Message>
-                {
+                Messages =
+                [
                     Message.FromUser("Hello there."),
                     Message.FromAssistant("Hi, I'm Claude. How can I help you?"),
-                    Message.FromUser("Tell me really long story about how a purple color became human?(in Turkish)")
-                },
-                MaxTokens = 1024,
+                    Message.FromUser("Tell me a really long story about how the color purple became human.")
+                ],
+                MaxTokens = 10,
                 Model = "claude-3-5-sonnet-20240620"
             });
 
-            await foreach (var completion in completionResult)
+            await foreach (var streamResponse in chatCompletionStream)
             {
-                if (completion.Successful)
+                if (streamResponse.IsMessageResponse())
                 {
-                    Console.Write(completion?.Content?.First().Text);
+                    var messageCompletion = streamResponse.As<MessageResponse>();
+                    Console.Write(messageCompletion.ToString());
                 }
-                else
+                else if (streamResponse.IsError())
                 {
-                    if (completion.Error == null)
-                    {
-                        throw new("Unknown Error");
-                    }
-
-                    Console.WriteLine($"{completion.HttpStatusCode}: {completion.Error.Message}");
+                    var errorResponse = streamResponse.As<BaseResponse>();
+                    Console.WriteLine($"Error: {errorResponse.HttpStatusCode}: {errorResponse.Error?.Message}");
+                }
+                else if (streamResponse.IsPingResponse())
+                {
+                    // Optionally handle ping responses
+                    // Console.WriteLine("Ping received");
                 }
             }
 
-            Console.WriteLine("");
-            Console.WriteLine("Complete");
+            Console.WriteLine("\nStream completed");
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
-            Console.WriteLine(e);
+            Console.WriteLine($"Exception occurred: {ex}");
             throw;
         }
+        Console.WriteLine("----  0  ----");
     }
 }

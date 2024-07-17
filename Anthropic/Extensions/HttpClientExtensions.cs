@@ -2,7 +2,7 @@
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Anthropic.ObjectModels;
+using Anthropic.ObjectModels.ResponseModels;
 
 namespace Anthropic.Extensions;
 

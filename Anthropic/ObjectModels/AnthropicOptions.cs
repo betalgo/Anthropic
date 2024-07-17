@@ -1,10 +1,9 @@
-﻿using System;
-
-namespace Anthropic.Services;
+﻿namespace Anthropic.ObjectModels;
 
 public class AnthropicOptions
 {
     private const string AnthropicDefaultApiVersion = "v1";
+    private const string AnthropicDefaultVersion = "2023-06-01";
     private const string AnthropicDefaultBaseDomain = "https://api.anthropic.com/";
 
 
@@ -12,12 +11,13 @@ public class AnthropicOptions
     ///     Setting key for Json Setting Bindings
     /// </summary>
     public static readonly string SettingKey = "AnthropicServiceOptions";
-    
+
+    private string? _providerVersion;
     private string? _apiVersion;
     private string? _baseDomain;
 
 
-    public ProviderType ProviderType { get; set; } = ProviderType.Anthropic;
+    public AnthropicProviderType ProviderType { get; set; } = AnthropicProviderType.Anthropic;
 
     public string ApiKey { get; set; } = null!;
 
@@ -27,7 +27,7 @@ public class AnthropicOptions
         {
             return _apiVersion ??= ProviderType switch
             {
-                ProviderType.Anthropic => AnthropicDefaultApiVersion,
+                AnthropicProviderType.Anthropic => AnthropicDefaultApiVersion,
                 _ => throw new ArgumentOutOfRangeException(nameof(ProviderType))
             };
         }
@@ -44,19 +44,33 @@ public class AnthropicOptions
         {
             return _baseDomain ??= ProviderType switch
             {
-                ProviderType.Anthropic => AnthropicDefaultBaseDomain,
+                AnthropicProviderType.Anthropic => AnthropicDefaultBaseDomain,
                 _ => throw new ArgumentOutOfRangeException(nameof(ProviderType))
             };
         }
         set => _baseDomain = value;
     }
-    
+
+    public string ProviderVersion
+    {
+        get
+        {
+            return _providerVersion ??= ProviderType switch
+            {
+                AnthropicProviderType.Anthropic => AnthropicDefaultVersion,
+                _ => throw new ArgumentOutOfRangeException(nameof(ProviderType))
+            };
+        }
+        set => _providerVersion = value;
+    }
+
     public bool ValidateApiOptions { get; set; } = true;
 
     /// <summary>
     ///     Default model id. If you are working with only one model, this will save you from few line extra code.
     /// </summary>
     public string? DefaultModelId { get; set; }
+
 
     /// <summary>
     ///     Validate Settings

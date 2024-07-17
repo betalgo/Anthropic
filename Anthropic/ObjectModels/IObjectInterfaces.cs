@@ -1,6 +1,6 @@
 ﻿namespace Anthropic.ObjectModels;
 
-public interface IObjectModels
+public interface IObjectInterfaces
 {
     public interface IModel
     {

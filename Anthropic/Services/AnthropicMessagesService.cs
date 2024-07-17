@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Anthropic.Extensions;
-using Anthropic.ObjectModels;
+using Anthropic.ObjectModels.RequestModels;
+using Anthropic.ObjectModels.ResponseModels;
 
 namespace Anthropic.Services;
 
@@ -14,23 +15,22 @@ public partial class AnthropicService : IMessagesService
     }
 
     /// <inheritdoc />
-    public async IAsyncEnumerable<MessageResponse> CreateAsStream(MessageRequest request, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+    public async IAsyncEnumerable<IStreamResponse> CreateAsStream(MessageRequest request, [EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
         // Mark the request as streaming
         request.Stream = true;
 
-        // Send the request to the CompletionCreate endpoint
         request.ProcessModelId(_defaultModelId);
 
         using var response = _httpClient.PostAsStreamAsync(_endpointProvider.CreateMessage(), request, cancellationToken);
 
         if (!response.IsSuccessStatusCode)
         {
-            yield return await response.HandleResponseContent<MessageResponse>(cancellationToken);
+            yield return await response.HandleResponseContent<BaseResponse>(cancellationToken);
             yield break;
         }
 
-        await foreach (var baseResponse in response.AsStream(cancellationToken: cancellationToken)) yield return baseResponse;
+        await foreach (var streamResponse in response.AsStream(cancellationToken: cancellationToken)) yield return streamResponse;
     }
 
     public IMessagesService Messages => this;
@@ -62,5 +62,5 @@ public interface IMessagesService
     /// <param name="request"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    public IAsyncEnumerable<MessageResponse> CreateAsStream(MessageRequest request, [EnumeratorCancellation] CancellationToken cancellationToken = default);
+    public IAsyncEnumerable<IStreamResponse> CreateAsStream(MessageRequest request, [EnumeratorCancellation] CancellationToken cancellationToken = default);
 }

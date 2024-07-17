@@ -1,4 +1,5 @@
 ﻿using Anthropic.EndpointProviders;
+using Anthropic.ObjectModels;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
@@ -31,18 +32,18 @@ public partial class AnthropicService : IAnthropicService, IDisposable
         }
 
         _httpClient.BaseAddress = new(settings.BaseDomain);
-        _httpClient.DefaultRequestHeaders.Add("anthropic-version", "2023-06-01");
+        _httpClient.DefaultRequestHeaders.Add("anthropic-version", settings.ProviderVersion);
         switch (settings.ProviderType)
         {
-            case ProviderType.Anthropic:
+            case AnthropicProviderType.Anthropic:
                 _httpClient.DefaultRequestHeaders.Add("x-api-key", settings.ApiKey);
                 break;
         }
 
         _endpointProvider = settings.ProviderType switch
         {
-            ProviderType.Anthropic => new AnthropicEndpointProvider(settings.ApiVersion),
-            _ => throw new ArgumentOutOfRangeException()
+            AnthropicProviderType.Anthropic => new AnthropicEndpointProvider(settings.ApiVersion),
+            _ => throw new ArgumentOutOfRangeException( nameof(settings.ProviderType))
         };
 
         _defaultModelId = settings.DefaultModelId;
@@ -54,7 +55,6 @@ public partial class AnthropicService : IAnthropicService, IDisposable
     {
         _defaultModelId = modelId;
     }
-    public IMessagesService ChatCompletion => this;
 
     /// <inheritdoc />
     public void Dispose()
@@ -73,24 +73,4 @@ public partial class AnthropicService : IAnthropicService, IDisposable
             }
         }
     }
-}
-
-/// <summary>
-///     Provider Type
-/// </summary>
-public enum ProviderType
-{
-    Anthropic = 1,
-    VertexAI = 2,
-    AmazonBedrock
-}
-
-public interface IAnthropicService
-{
-    public IMessagesService Messages { get; }
-    /// <summary>
-    ///     Set default model
-    /// </summary>
-    /// <param name="modelId"></param>
-    void SetDefaultModelId(string modelId);
 }
