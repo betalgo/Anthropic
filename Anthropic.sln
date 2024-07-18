@@ -10,10 +10,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Playground", "Playground", "{7F2D91D5-8D0E-4CD5-A318-84B6F6735B36}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{5AC4E9CB-6E54-4A95-A4FF-33DB4371E3A2}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\BuildAndDeployBetalgoAnthropic.yml = .github\workflows\BuildAndDeployBetalgoAnthropic.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{95662577-AEDA-41A8-B9B7-B3DC544D0E1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anthropic.Playground", "Anthropic.Playground\Anthropic.Playground.csproj", "{74CD66BC-4685-493F-8751-536E4185DCF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anthropic.Playground", "Anthropic.Playground\Anthropic.Playground.csproj", "{74CD66BC-4685-493F-8751-536E4185DCF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
