@@ -3,6 +3,7 @@
 public interface IAnthropicService
 {
     public IMessagesService Messages { get; }
+
     /// <summary>
     ///     Set default model
     /// </summary>

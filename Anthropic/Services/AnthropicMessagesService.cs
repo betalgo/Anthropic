@@ -1,12 +1,14 @@
 ﻿using System.Runtime.CompilerServices;
+using Anthropic.ApiModels.RequestModels;
 using Anthropic.Extensions;
-using Anthropic.ObjectModels.RequestModels;
 using Anthropic.ObjectModels.ResponseModels;
 
 namespace Anthropic.Services;
 
 public partial class AnthropicService : IMessagesService
 {
+    public IMessagesService Messages => this;
+
     /// <inheritdoc />
     public async Task<MessageResponse> Create(MessageRequest request, CancellationToken cancellationToken = default)
     {
@@ -30,11 +32,8 @@ public partial class AnthropicService : IMessagesService
             yield break;
         }
 
-        await foreach (var streamResponse in response.AsStream(cancellationToken: cancellationToken)) yield return streamResponse;
+        await foreach (var streamResponse in response.AsStream(cancellationToken)) yield return streamResponse;
     }
-
-    public IMessagesService Messages => this;
-
 }
 
 /// <summary>

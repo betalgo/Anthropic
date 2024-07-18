@@ -51,6 +51,7 @@ internal static class ChatToolUseTestHelper
                     {
                         continue;
                     }
+
                     switch (content.Type)
                     {
                         case "text":

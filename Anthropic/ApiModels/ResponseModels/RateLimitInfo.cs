@@ -4,18 +4,18 @@ using Anthropic.Extensions;
 namespace Anthropic.ObjectModels.ResponseModels;
 
 /// <summary>
-/// Represents rate limit information from Anthropic API headers.
+///     Represents rate limit information from Anthropic API headers.
 /// </summary>
 /// <remarks>
-/// Initializes a new instance of the RateLimitInfo class from HttpResponseHeaders.
+///     Initializes a new instance of the RateLimitInfo class from HttpResponseHeaders.
 /// </remarks>
 public class RateLimitInfo
 {
     /// <summary>
-    /// Represents rate limit information from Anthropic API headers.
+    ///     Represents rate limit information from Anthropic API headers.
     /// </summary>
     /// <remarks>
-    /// Initializes a new instance of the RateLimitInfo class from HttpResponseHeaders.
+    ///     Initializes a new instance of the RateLimitInfo class from HttpResponseHeaders.
     /// </remarks>
     /// <param name="headers">The HTTP response headers.</param>
     public RateLimitInfo(HttpResponseHeaders headers)
@@ -30,37 +30,37 @@ public class RateLimitInfo
     }
 
     /// <summary>
-    /// Gets the maximum number of requests allowed within any rate limit period.
+    ///     Gets the maximum number of requests allowed within any rate limit period.
     /// </summary>
     public int? RequestsLimit { get; }
 
     /// <summary>
-    /// Gets the number of requests remaining before being rate limited.
+    ///     Gets the number of requests remaining before being rate limited.
     /// </summary>
     public int? RequestsRemaining { get; }
 
     /// <summary>
-    /// Gets the time when the request rate limit will reset, provided in RFC 3339 format.
+    ///     Gets the time when the request rate limit will reset, provided in RFC 3339 format.
     /// </summary>
     public DateTimeOffset? RequestsReset { get; }
 
     /// <summary>
-    /// Gets the maximum number of tokens allowed within any rate limit period.
+    ///     Gets the maximum number of tokens allowed within any rate limit period.
     /// </summary>
     public int? TokensLimit { get; }
 
     /// <summary>
-    /// Gets the number of tokens remaining (rounded to the nearest thousand) before being rate limited.
+    ///     Gets the number of tokens remaining (rounded to the nearest thousand) before being rate limited.
     /// </summary>
     public int? TokensRemaining { get; }
 
     /// <summary>
-    /// Gets the time when the token rate limit will reset, provided in RFC 3339 format.
+    ///     Gets the time when the token rate limit will reset, provided in RFC 3339 format.
     /// </summary>
     public DateTimeOffset? TokensReset { get; }
 
     /// <summary>
-    /// Gets the number of seconds until you can retry the request.
+    ///     Gets the number of seconds until you can retry the request.
     /// </summary>
     public int? RetryAfter { get; }
 
@@ -70,6 +70,7 @@ public class RateLimitInfo
         {
             return value;
         }
+
         return null;
     }
 
@@ -79,6 +80,7 @@ public class RateLimitInfo
         {
             return value;
         }
+
         return null;
     }
 }

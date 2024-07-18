@@ -12,9 +12,10 @@ public class AnthropicOptions
     /// </summary>
     public static readonly string SettingKey = "AnthropicServiceOptions";
 
-    private string? _providerVersion;
     private string? _apiVersion;
     private string? _baseDomain;
+
+    private string? _providerVersion;
 
 
     public AnthropicProviderType ProviderType { get; set; } = AnthropicProviderType.Anthropic;

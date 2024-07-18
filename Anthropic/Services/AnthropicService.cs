@@ -43,7 +43,7 @@ public partial class AnthropicService : IAnthropicService, IDisposable
         _endpointProvider = settings.ProviderType switch
         {
             AnthropicProviderType.Anthropic => new AnthropicEndpointProvider(settings.ApiVersion),
-            _ => throw new ArgumentOutOfRangeException( nameof(settings.ProviderType))
+            _ => throw new ArgumentOutOfRangeException(nameof(settings.ProviderType))
         };
 
         _defaultModelId = settings.DefaultModelId;

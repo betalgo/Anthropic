@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Anthropic.Extensions;
 
-
 public static class AnthropicServiceCollectionExtensions
 {
     public static IHttpClientBuilder AddAnthropicService(this IServiceCollection services, Action<AnthropicOptions>? setupAction = null)

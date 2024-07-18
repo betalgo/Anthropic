@@ -51,8 +51,8 @@ internal static class ChatTestHelper
             Console.WriteLine($"Exception occurred: {ex}");
             throw;
         }
-        Console.WriteLine("----  0  ----");
 
+        Console.WriteLine("----  0  ----");
     }
 
     /// <summary>
@@ -103,6 +103,7 @@ internal static class ChatTestHelper
             Console.WriteLine($"Exception occurred: {ex}");
             throw;
         }
+
         Console.WriteLine("----  0  ----");
     }
 }

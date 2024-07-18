@@ -3,17 +3,12 @@ using Anthropic.ObjectModels.SharedModels;
 
 namespace Anthropic.ObjectModels.ResponseModels;
 
-public class PingResponse: BaseResponse, IStreamResponse
+public class PingResponse : BaseResponse, IStreamResponse
 {
 }
+
 public class MessageResponse : BaseResponse, IStreamResponse
 {
-
-    public override string? ToString()
-    {
-        return Content?.FirstOrDefault()?.Text;
-    }
-
     [JsonPropertyName("content")]
     [JsonConverter(typeof(JsonConverters.ContentConverter))]
     public List<ContentBlock>? Content { get; set; }
@@ -29,6 +24,11 @@ public class MessageResponse : BaseResponse, IStreamResponse
 
     [JsonPropertyName("stop_sequence")]
     public string? StopSequence { get; set; }
+
+    public override string? ToString()
+    {
+        return Content?.FirstOrDefault()?.Text;
+    }
 
     public Message ToMessage()
     {

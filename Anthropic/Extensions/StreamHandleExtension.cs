@@ -50,15 +50,14 @@ public static class StreamHandleExtension
                 {
                     continue;
                 }
-                yield return yieldResponse;
 
+                yield return yieldResponse;
             }
         }
     }
 
     private static IStreamResponse? ProcessEventData(string data, string currentEvent, string currentEventType, string? currentEventSubType, StreamToolUseJsonBuilder toolUseBuilder)
     {
-        
         return currentEventSubType switch
         {
             StaticValues.EventSubTypes.Ping => new PingResponse { StreamEvent = currentEvent },
@@ -106,6 +105,7 @@ public static class StreamHandleExtension
         {
             return null;
         }
+
         var (deltaEventType, deltaEventSubType) = ParseEvent(deltaBase.Delta.Type);
 
         switch (currentEventType)
@@ -118,6 +118,7 @@ public static class StreamHandleExtension
                 {
                     response.Usage = deltaItemMessage.Usage;
                 }
+
                 return response;
             }
             case StaticValues.TypeConstants.ContentBlock when deltaEventSubType == StaticValues.EventSubTypes.Delta:
@@ -297,6 +298,7 @@ internal class StreamToolUseJsonBuilder
                 Input = inputJson
             };
         }
+
         return new();
     }
 

@@ -1,11 +1,9 @@
 ﻿using Anthropic.Extensions;
-using Anthropic.ObjectModels.RequestModels;
 using Anthropic.Playground.TestHelpers;
 using Anthropic.Services;
 using LaserCatEyes.HttpClientListener;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-
 
 var builder = new ConfigurationBuilder().AddUserSecrets<Program>();
 
@@ -18,7 +16,6 @@ serviceCollection.AddScoped(_ => configuration);
 // It is in Beta version, if you don't want to use it just comment out below line.
 serviceCollection.AddLaserCatEyesHttpClientListener();
 
-//if you want to use beta services you have to set UseBeta to true. Otherwise, it will use the stable version of Anthropic apis.
 serviceCollection.AddAnthropicService();
 
 //serviceCollection.AddAnthropicService(options =>

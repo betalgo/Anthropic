@@ -1,7 +1,8 @@
 ﻿using System.Text.Json.Serialization;
+using Anthropic.ObjectModels;
 using Anthropic.ObjectModels.SharedModels;
 
-namespace Anthropic.ObjectModels.RequestModels;
+namespace Anthropic.ApiModels.RequestModels;
 
 /// <summary>
 ///     Represents a request to create a message using the Anthropic API.
@@ -13,7 +14,6 @@ public class MessageRequest : IObjectInterfaces.IModel
     }
 
     /// <summary>
-    /// 
     /// </summary>
     /// <param name="messages"></param>
     /// <param name="maxTokens"></param>
@@ -29,14 +29,14 @@ public class MessageRequest : IObjectInterfaces.IModel
     /// <summary>
     ///     Gets or sets the maximum number of tokens to generate before stopping.
     /// </summary>
-    ///  <remarks> Required </remarks>
+    /// <remarks> Required </remarks>
     [JsonPropertyName("max_tokens")]
     public int MaxTokens { get; set; }
 
     /// <summary>
     ///     Gets or sets the input messages for the conversation.
     /// </summary>
-    ///  <remarks> Required </remarks>
+    /// <remarks> Required </remarks>
     [JsonPropertyName("messages")]
     public List<Message> Messages { get; set; }
 
@@ -86,7 +86,7 @@ public class MessageRequest : IObjectInterfaces.IModel
     /// <summary>
     ///     Gets or sets the model that will complete the prompt.
     /// </summary>
-    ///  <remarks> Required </remarks>
+    /// <remarks> Required </remarks>
     [JsonPropertyName("model")]
     public string Model { get; set; }
 }
