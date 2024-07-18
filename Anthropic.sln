@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{5AC4E9CB-6E54-4A95-A4FF-33DB4371E3A2}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\BuildAndDeployBetalgoAnthropic.yml = .github\workflows\BuildAndDeployBetalgoAnthropic.yml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{95662577-AEDA-41A8-B9B7-B3DC544D0E1C}"

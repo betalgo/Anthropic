@@ -10,7 +10,7 @@
 		<PackageIcon>Ranul-Anthropic-Icon.png</PackageIcon>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Anthropic Claude C# .NET library by Ranul Betalgo</Title>
-		<Version>8.0.0</Version>
+		<Version>8.0.1</Version>
 		<Authors>Tolga Kayhan, Betalgo, Ranul</Authors>
 		<Company>Betalgo Up Ltd.</Company>
 		<Product>Anthropic Claude C# .NET library by Ranul Betalgo</Product>
@@ -35,10 +35,6 @@
 		<None Remove="Interfaces\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Include="..\Readme.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
 		<None Include="Ranul-Anthropic-Icon.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
