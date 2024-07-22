@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Anthropic.ObjectModels.SharedModels;
+namespace Anthropic.ApiModels.SharedModels;
 
 /// <summary>
 ///     Function parameter is a JSON Schema object.

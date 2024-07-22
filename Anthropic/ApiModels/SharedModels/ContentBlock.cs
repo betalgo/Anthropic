@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Anthropic.ObjectModels.ResponseModels;
+using Anthropic.ApiModels.ResponseModels;
 
-namespace Anthropic.ObjectModels.SharedModels;
+namespace Anthropic.ApiModels.SharedModels;
 
 public class ContentBlock : TypeBaseResponse
 {
@@ -29,6 +29,14 @@ public class ContentBlock : TypeBaseResponse
 
     [JsonIgnore]
     public bool IsToolUse => Type == "tool_use";
+
+    [JsonPropertyName("tool_use_id")]
+
+    public string? ToolUseId { get; set; }
+
+    [JsonPropertyName("content")]
+
+    public List<ContentBlock>? Content { get; set; }
 
     public static ContentBlock CreateText(string? text)
     {
@@ -60,6 +68,17 @@ public class ContentBlock : TypeBaseResponse
             Id = id,
             Name = name,
             Input = input
+        };
+    }
+
+    public static ContentBlock CreateToolResult(object input, string toolUseId, List<ContentBlock>? content)
+    {
+        return new()
+        {
+            Type = "tool_result",
+            ToolUseId = toolUseId,
+            Input = input,
+            Content = content
         };
     }
 }

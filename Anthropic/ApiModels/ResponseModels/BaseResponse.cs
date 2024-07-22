@@ -1,9 +1,9 @@
 ﻿using System.Net;
 using System.Net.Http.Headers;
 using System.Text.Json.Serialization;
-using Anthropic.ObjectModels.SharedModels;
+using Anthropic.ApiModels.SharedModels;
 
-namespace Anthropic.ObjectModels.ResponseModels;
+namespace Anthropic.ApiModels.ResponseModels;
 
 public class TypeBaseResponse : IType
 {

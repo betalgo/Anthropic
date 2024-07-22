@@ -1,6 +1,6 @@
 ﻿using Anthropic.Extensions;
 
-namespace Anthropic.ObjectModels.ResponseModels;
+namespace Anthropic.ApiModels.ResponseModels;
 
 /// <summary>
 ///     Represents the values of various headers in an HTTP response.

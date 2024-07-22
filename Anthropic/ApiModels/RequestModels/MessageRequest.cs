@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
-using Anthropic.ObjectModels;
-using Anthropic.ObjectModels.SharedModels;
+using Anthropic.ApiModels.SharedModels;
 
 namespace Anthropic.ApiModels.RequestModels;
 

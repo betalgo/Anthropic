@@ -1,4 +1,4 @@
-﻿namespace Anthropic.ObjectModels;
+﻿namespace Anthropic.ApiModels;
 
 /// <summary>
 ///     Anthropic Provider Type

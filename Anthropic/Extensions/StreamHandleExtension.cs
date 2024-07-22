@@ -2,9 +2,9 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Anthropic.ObjectModels;
-using Anthropic.ObjectModels.ResponseModels;
-using Anthropic.ObjectModels.SharedModels;
+using Anthropic.ApiModels;
+using Anthropic.ApiModels.ResponseModels;
+using Anthropic.ApiModels.SharedModels;
 using static Anthropic.Extensions.StreamPartialResponse;
 
 namespace Anthropic.Extensions;

@@ -1,4 +1,4 @@
-﻿namespace Anthropic.ObjectModels;
+﻿namespace Anthropic.ApiModels;
 
 public interface IObjectInterfaces
 {

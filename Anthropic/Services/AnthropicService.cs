@@ -1,5 +1,5 @@
-﻿using Anthropic.EndpointProviders;
-using Anthropic.ObjectModels;
+﻿using Anthropic.ApiModels;
+using Anthropic.EndpointProviders;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 

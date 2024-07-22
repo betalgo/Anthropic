@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Anthropic.ObjectModels.SharedModels;
+using Anthropic.ApiModels.SharedModels;
 
-namespace Anthropic.ObjectModels.ResponseModels;
+namespace Anthropic.ApiModels.ResponseModels;
 
 public class PingResponse : BaseResponse, IStreamResponse
 {

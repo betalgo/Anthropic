@@ -1,5 +1,5 @@
-﻿using Anthropic.ObjectModels.ResponseModels;
-using Anthropic.ObjectModels.SharedModels;
+﻿using Anthropic.ApiModels.ResponseModels;
+using Anthropic.ApiModels.SharedModels;
 using Anthropic.Services;
 
 namespace Anthropic.Playground.TestHelpers;

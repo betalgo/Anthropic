@@ -1,6 +1,6 @@
-﻿using Anthropic.Extensions;
-using Anthropic.ObjectModels.ResponseModels;
-using Anthropic.ObjectModels.SharedModels;
+﻿using Anthropic.ApiModels.ResponseModels;
+using Anthropic.ApiModels.SharedModels;
+using Anthropic.Extensions;
 using Anthropic.Playground.SampleModels;
 using Anthropic.Services;
 

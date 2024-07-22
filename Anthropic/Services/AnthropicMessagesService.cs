@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Anthropic.ApiModels.RequestModels;
+using Anthropic.ApiModels.ResponseModels;
 using Anthropic.Extensions;
-using Anthropic.ObjectModels.ResponseModels;
 
 namespace Anthropic.Services;
 

@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using Anthropic.Extensions;
 
-namespace Anthropic.ObjectModels.ResponseModels;
+namespace Anthropic.ApiModels.ResponseModels;
 
 /// <summary>
 ///     Represents rate limit information from Anthropic API headers.

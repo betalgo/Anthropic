@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using Anthropic.ObjectModels.SharedModels;
+using Anthropic.ApiModels.SharedModels;
 
-namespace Anthropic.ObjectModels;
+namespace Anthropic.ApiModels;
 
 internal class JsonConverters
 {

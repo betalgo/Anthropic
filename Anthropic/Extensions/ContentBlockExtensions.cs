@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using Anthropic.ObjectModels.SharedModels;
+using Anthropic.ApiModels.SharedModels;
 
 namespace Anthropic.Extensions;
 

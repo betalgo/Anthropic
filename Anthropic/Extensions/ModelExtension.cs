@@ -1,4 +1,4 @@
-﻿using Anthropic.ObjectModels;
+﻿using Anthropic.ApiModels;
 
 namespace Anthropic.Extensions;
 

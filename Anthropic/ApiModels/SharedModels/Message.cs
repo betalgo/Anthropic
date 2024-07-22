@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Anthropic.ObjectModels.SharedModels;
+namespace Anthropic.ApiModels.SharedModels;
 
 public class Message
 {
