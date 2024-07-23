@@ -1,8 +1,10 @@
-﻿# .NET Library for Anthropic Claude
-⭐ We appreciate your star, it helps!
+﻿![Betalgo Ranul Anthropic Github readme banner](https://github.com/user-attachments/assets/c669c7b0-4e37-4c8d-b8fb-b3dd13a8f5ed)
+# .NET Library for Anthropic Claude
 
-[![Discord Shield](https://discord.com/api/guilds/1250841506785529916/widget.png?style=shield)](https://discord.gg/rHEu5THg) *(If the invite link doesn't work, ping me in discussions.)*  
-We have a very new Discord channel. Please come and help us build the .NET AI community.
+⭐ We appreciate your star, it helps! ![GitHub Repo stars](https://img.shields.io/github/stars/betalgo/Anthropic)  
+ #### Community Links
+ We have a very new [![Discord Shield](https://discord.com/api/guilds/1250841506785529916/widget.png?style=shield)](https://discord.gg/gfgHsWnGxy)   and [![Static Badge](https://img.shields.io/badge/Reddit-BetalgoDevelopers-orange)](https://www.reddit.com/r/BetalgoDevelopers) channel. Please come and help us build the .NET AI community.
+ 
 
 This C# library is created by [Betalgo](https://github.com/betalgo) for the Ranul Tinga Project and is released under the MIT license.
 
