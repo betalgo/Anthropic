@@ -3,7 +3,7 @@
 
 ⭐ We appreciate your star, it helps! ![GitHub Repo stars](https://img.shields.io/github/stars/betalgo/Anthropic)  
  #### Community Links
- We have a very new [![Discord Shield](https://discord.com/api/guilds/1250841506785529916/widget.png?style=shield)](https://discord.gg/gfgHsWnGxy)   and [![Static Badge](https://img.shields.io/badge/Reddit-BetalgoDevelopers-orange)](https://www.reddit.com/r/BetalgoDevelopers) channel. Please come and help us build the .NET AI community.
+ We have a very new [![Discord](https://img.shields.io/discord/1250841506785529916?label=Discord)](https://discord.gg/gfgHsWnGxy) and [![Static Badge](https://img.shields.io/badge/Reddit-BetalgoDevelopers-orange)](https://www.reddit.com/r/BetalgoDevelopers) channel. Please come and help us build the .NET AI community.
  
 
 This C# library is created by [Betalgo](https://github.com/betalgo) for the Ranul Tinga Project and is released under the MIT license.
