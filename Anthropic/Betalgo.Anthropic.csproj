@@ -10,7 +10,7 @@
 		<PackageIcon>Ranul-Anthropic-Icon.png</PackageIcon>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Anthropic Claude C# .NET library by Ranul Betalgo</Title>
-		<Version>8.0.2</Version>
+		<Version>8.1.0</Version>
 		<Authors>Tolga Kayhan, Betalgo, Ranul</Authors>
 		<Company>Betalgo Up Ltd.</Company>
 		<Product>Anthropic Claude C# .NET library by Ranul Betalgo</Product>
