@@ -1,4 +1,4 @@
-﻿namespace Anthropic.Services;
+﻿namespace Betalgo.Anthropic.Services;
 
 public interface IAnthropicService
 {

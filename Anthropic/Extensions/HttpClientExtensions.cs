@@ -2,9 +2,10 @@
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Anthropic.ApiModels.ResponseModels;
+using Betalgo.Anthropic.Extensions;
+using Betalgo.Anthropic.ApiModels.ResponseModels;
 
-namespace Anthropic.Extensions;
+namespace Betalgo.Anthropic.Extensions;
 
 internal static class HttpClientExtensions
 {

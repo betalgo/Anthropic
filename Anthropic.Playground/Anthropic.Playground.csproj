@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Anthropic\Anthropic.csproj" />
+    <ProjectReference Include="..\Anthropic\Betalgo.Anthropic.csproj" />
   </ItemGroup>
 
 </Project>

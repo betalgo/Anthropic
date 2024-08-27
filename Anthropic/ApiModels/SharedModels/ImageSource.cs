@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Anthropic.ApiModels.ResponseModels;
+using Betalgo.Anthropic.ApiModels.ResponseModels;
 
-namespace Anthropic.ApiModels.SharedModels;
+namespace Betalgo.Anthropic.ApiModels.SharedModels;
 
 public class ImageSource : TypeBaseResponse
 {

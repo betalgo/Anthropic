@@ -1,4 +1,4 @@
-﻿namespace Anthropic.ApiModels;
+﻿namespace Betalgo.Anthropic.ApiModels;
 
 /// <summary>
 ///     Anthropic Provider Type

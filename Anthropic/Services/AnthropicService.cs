@@ -1,9 +1,9 @@
-﻿using Anthropic.ApiModels;
-using Anthropic.EndpointProviders;
+﻿using Betalgo.Anthropic.ApiModels;
+using Betalgo.Anthropic.EndpointProviders;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
-namespace Anthropic.Services;
+namespace Betalgo.Anthropic.Services;
 
 public partial class AnthropicService : IAnthropicService, IDisposable
 {

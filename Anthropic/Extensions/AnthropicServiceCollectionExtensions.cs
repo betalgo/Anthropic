@@ -1,8 +1,8 @@
-﻿using Anthropic.ApiModels;
-using Anthropic.Services;
+﻿using Betalgo.Anthropic.ApiModels;
+using Betalgo.Anthropic.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Anthropic.Extensions;
+namespace Betalgo.Anthropic.Extensions;
 
 public static class AnthropicServiceCollectionExtensions
 {

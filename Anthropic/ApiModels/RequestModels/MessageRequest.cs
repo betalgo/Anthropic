@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
-using Anthropic.ApiModels.SharedModels;
+using Betalgo.Anthropic.ApiModels.SharedModels;
 
-namespace Anthropic.ApiModels.RequestModels;
+namespace Betalgo.Anthropic.ApiModels.RequestModels;
 
 /// <summary>
 ///     Represents a request to create a message using the Anthropic API.

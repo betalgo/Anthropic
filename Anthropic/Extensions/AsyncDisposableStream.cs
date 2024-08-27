@@ -1,5 +1,5 @@
 ﻿#if NETSTANDARD2_0
-namespace Anthropic.Extensions
+namespace Betalgo.Anthropic.Extensions
 {
     public class AsyncDisposableStream : Stream, IAsyncDisposable
     {

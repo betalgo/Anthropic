@@ -1,8 +1,8 @@
-﻿using Anthropic.ApiModels.ResponseModels;
-using Anthropic.ApiModels.SharedModels;
-using Anthropic.Extensions;
-using Anthropic.Playground.SampleModels;
-using Anthropic.Services;
+﻿using Anthropic.Playground.SampleModels;
+using Betalgo.Anthropic.ApiModels.ResponseModels;
+using Betalgo.Anthropic.ApiModels.SharedModels;
+using Betalgo.Anthropic.Extensions;
+using Betalgo.Anthropic.Services;
 
 namespace Anthropic.Playground.TestHelpers;
 

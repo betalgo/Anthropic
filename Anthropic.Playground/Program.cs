@@ -1,6 +1,6 @@
-﻿using Anthropic.Extensions;
-using Anthropic.Playground.TestHelpers;
-using Anthropic.Services;
+﻿using Anthropic.Playground.TestHelpers;
+using Betalgo.Anthropic.Extensions;
+using Betalgo.Anthropic.Services;
 using LaserCatEyes.HttpClientListener;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

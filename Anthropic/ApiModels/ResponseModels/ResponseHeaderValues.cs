@@ -1,6 +1,6 @@
-﻿using Anthropic.Extensions;
+﻿using Betalgo.Anthropic.Extensions;
 
-namespace Anthropic.ApiModels.ResponseModels;
+namespace Betalgo.Anthropic.ApiModels.ResponseModels;
 
 /// <summary>
 ///     Represents the values of various headers in an HTTP response.

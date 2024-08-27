@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Headers;
-using Anthropic.Extensions;
+using Betalgo.Anthropic.Extensions;
 
-namespace Anthropic.ApiModels.ResponseModels;
+namespace Betalgo.Anthropic.ApiModels.ResponseModels;
 
 /// <summary>
 ///     Represents rate limit information from Anthropic API headers.

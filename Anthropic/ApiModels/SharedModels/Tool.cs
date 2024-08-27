@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Anthropic.ApiModels.SharedModels;
+namespace Betalgo.Anthropic.ApiModels.SharedModels;
 
 /// <summary>
 ///     Represents a tool definition that the model may use.

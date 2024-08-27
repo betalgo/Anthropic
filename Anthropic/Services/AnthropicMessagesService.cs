@@ -1,9 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
-using Anthropic.ApiModels.RequestModels;
-using Anthropic.ApiModels.ResponseModels;
-using Anthropic.Extensions;
+using Betalgo.Anthropic.ApiModels.RequestModels;
+using Betalgo.Anthropic.ApiModels.ResponseModels;
+using Betalgo.Anthropic.Extensions;
 
-namespace Anthropic.Services;
+namespace Betalgo.Anthropic.Services;
 
 public partial class AnthropicService : IMessagesService
 {

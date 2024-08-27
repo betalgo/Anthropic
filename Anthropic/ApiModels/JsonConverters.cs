@@ -1,8 +1,8 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using Anthropic.ApiModels.SharedModels;
+using Betalgo.Anthropic.ApiModels.SharedModels;
 
-namespace Anthropic.ApiModels;
+namespace Betalgo.Anthropic.ApiModels;
 
 internal class JsonConverters
 {

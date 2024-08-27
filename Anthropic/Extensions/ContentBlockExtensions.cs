@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
-using Anthropic.ApiModels.SharedModels;
+using Betalgo.Anthropic.ApiModels.SharedModels;
 
-namespace Anthropic.Extensions;
+namespace Betalgo.Anthropic.Extensions;
 
 public static class ContentBlockExtensions
 {

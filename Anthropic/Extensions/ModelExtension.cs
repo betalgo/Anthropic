@@ -1,6 +1,6 @@
-﻿using Anthropic.ApiModels;
+﻿using Betalgo.Anthropic.ApiModels;
 
-namespace Anthropic.Extensions;
+namespace Betalgo.Anthropic.Extensions;
 
 internal static class ModelExtension
 {

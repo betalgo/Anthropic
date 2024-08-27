@@ -1,4 +1,4 @@
-﻿namespace Anthropic.EndpointProviders;
+﻿namespace Betalgo.Anthropic.EndpointProviders;
 
 public interface IAnthropicEndpointProvider
 {

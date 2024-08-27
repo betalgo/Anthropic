@@ -2,12 +2,12 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Anthropic.ApiModels;
-using Anthropic.ApiModels.ResponseModels;
-using Anthropic.ApiModels.SharedModels;
-using static Anthropic.Extensions.StreamPartialResponse;
+using Betalgo.Anthropic.ApiModels;
+using Betalgo.Anthropic.ApiModels.ResponseModels;
+using Betalgo.Anthropic.ApiModels.SharedModels;
+using static Betalgo.Anthropic.Extensions.StreamPartialResponse;
 
-namespace Anthropic.Extensions;
+namespace Betalgo.Anthropic.Extensions;
 
 public static class StreamHandleExtension
 {
