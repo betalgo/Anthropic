@@ -51,6 +51,10 @@ if (messageResponse.Successful)
 This library is a community project for interacting with Anthropic's Claude AI and is not officially supported by Anthropic. Please use it responsibly and in accordance with Anthropic's usage policies for Claude.
 
 ## Changelog
+### 8.1.1
+- Updated NuGet packages to address a security issue flagged by Microsoft: https://github.com/advisories/GHSA-8g4q-xg66-9fp4
+### 8.1.0
+- Updated Namespace to `Betalgo.Anthropic`
 ### 8.0.0
 - Initial release of the Anthropic Claude .NET Library
 
